@@ -10,10 +10,10 @@ class Menu:
     the menu_bar takes `place(relx=0.0, rely=0.0)` which would be upmost precedence
     """
 
-    def __init__(self, root: ctk.CTk, _rely=0.0) -> None:
+    def __init__(self, root: ctk.CTk, _rely=0.0, _relheight=0.043) -> None:
         self._root = root
         self._menu_bar = ctk.CTkFrame(self._root, cursor="hand2")
-        self._menu_bar.place(relx=0.0, rely=_rely, relheight=0.043)
+        self._menu_bar.place(relx=0.0, rely=_rely, relheight=_relheight)
         self._menu_widgets: list[tk.Menubutton] = []
         ctk.AppearanceModeTracker.add(self.set_appearance_mode)
 
