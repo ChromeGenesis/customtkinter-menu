@@ -5,8 +5,9 @@ from typing import Literal
 
 class Menu:
     """
-    Custom Menu Class (Specifically For Windows Using Place Geometry Manager)
+    Custom Menu Class.
     When initializing the menu, make sure there's upper window space for the menu bar,
+    menu is packed like so: `pack(side="top", fill="x")`
     """
 
     def __init__(self, root: ctk.CTk) -> None:
